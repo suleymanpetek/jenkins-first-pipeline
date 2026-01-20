@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Poll SCM ile tetiklendi"
+                echo "Webhook ile tetiklendi!"
                 sh 'date'
             }
         }
