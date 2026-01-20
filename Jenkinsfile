@@ -1,10 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Environment Check') {
             steps {
-                echo "Webhook ile tetiklendi!"
-                sh 'date'
+                echo 'Python versiyonu kontrol ediliyor...'
+                sh 'python3 --version'
+            }
+        }
+        stage('Run Python Script') {
+            steps {
+                echo 'Python uygulamasi calistiriliyor...'
+                sh 'python3 hello.py'
             }
         }
     }
