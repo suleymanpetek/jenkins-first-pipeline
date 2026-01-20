@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Jenkinsfile ile calisan pipeline"
-                sh 'echo GitHub reposundan geldi'
+                echo "Poll SCM ile tetiklendi"
+                sh 'date'
             }
         }
     }
